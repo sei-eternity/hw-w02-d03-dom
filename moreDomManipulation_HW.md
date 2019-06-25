@@ -30,7 +30,7 @@ Start with this HTML and save it as "aboutme.html":
   </ul>
 
   <div class="favoriteBooks"></div>
-
+<script src="app.js"></script>
 </body>
 
 </html>

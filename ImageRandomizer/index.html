@@ -13,13 +13,20 @@
   <div>
     <label>
       Width:
-      <input type="number" class="width" value= "0" />
+      <input type="number" class="width" value= "" />
     </label>
     <label>
       Height:
-      <input type="number" class="height" value= "0"  />
+      <input type="number" class="height" value= ""  />
     </label>
+    <select id = "siteList">
+               <option value = "picsum">Picsum</option>
+               <option value = "fillMurray">Fill Murray</option>
+               <option value = "placeCage">Place Cage</option>
+               <option value = "loremFlickr">Lorem Flickr</option>
+    </select>
     <button id="randomize">Get random image!</button>
+    <button id="clear" onClick="history.go(0)">Clear</button>
   </div>
 
   <div class="image"></div>

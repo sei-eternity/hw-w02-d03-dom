@@ -28,13 +28,15 @@
 
   <script>
 function myFunction() {
-    let m = document.getElementsByClassName("width").value;
-  document.getElementById("demo").innerHTML = m;
+    let w = document.querySelector(".width").value;
+     let h = document.querySelector(".height").value;
   
   let x = document.createElement("IMG");
-  x.setAttribute("src", "https://source.unsplash.com/random");
-  x.setAttribute("width", "300");
-  x.setAttribute("height", "250");
+   x.setAttribute("src", "https://source.unsplash.com/"+w+"x"+h+"");
+
+ // x.setAttribute("src", "https://source.unsplash.com/random");
+  //x.setAttribute("width", w);
+ // x.setAttribute("height", h);
   x.setAttribute("alt", "img");
   document.body.appendChild(x);
 

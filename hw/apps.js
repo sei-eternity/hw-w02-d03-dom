@@ -26,10 +26,10 @@ document.getElementsByClassName('profilePicture');
 
 
 //3
-var listitems = document.getElementsByTagName("li");
-for (let i = 0; i < listitems.length; i++)
+var listitemsClass = document.getElementsByTagName("li");
+for (let i = 0; i < listitemsClass.length; i++)
 {
- document.createElement('li.listitem')[i];
+  listitemsClass[i].setAttribute("class","listitem");
 }
 
 //4

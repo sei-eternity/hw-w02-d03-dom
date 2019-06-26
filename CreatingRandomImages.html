@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <label>
+      Width:
+      <input type="number" class="width" value="nan" />
+    </label>
+    <label>
+      Height:
+      <input type="number" class="height" value="nan" />
+    </label>
+    <button id="randomize" onclick="myFunction()" >Get random image!</button>
+    <p id="demo"></p>
+
+  </div>
+
+  <div class="image"></div>
+
+  <script>
+function myFunction() {
+    let w = document.querySelector(".width").value;
+     let h = document.querySelector(".height").value;
+  
+  let x = document.createElement("IMG");
+   x.setAttribute("src", "https://source.unsplash.com/"+w+"x"+h+"");
+
+ // x.setAttribute("src", "https://source.unsplash.com/random");
+  //x.setAttribute("width", w);
+ // x.setAttribute("height", h);
+  x.setAttribute("alt", "img");
+  document.body.appendChild(x);
+
+      
+}
+</script>
+  
+</body>
+
+</html>

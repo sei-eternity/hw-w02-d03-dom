@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>More DOM Manipulation</title>
+</head>
+
+<body>
+
+  <h1>About Me</h1>
+
+  <div class="profilePicture"></div>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorite Animal: <span id="favorite"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+  </ul>
+
+  <div class="favoriteBooks"></div>
+
+<!--Change the "Arial, sans-serif"  -->
+  
+  <script>
+document.body.style.fontSize = "Arial, sans-serif";
+    
+const nickname = document.querySelector('#nickname');
+const favorite = document.querySelector('#favorite');
+const hometown = document.querySelector('#hometown');
+nickname.innerHTML = 'name';
+favorite.innerHTML = 'boks';
+hometown.innerHTML = 'Canary';
+    const lists = document.querySelectorAll('li');
+lists.forEach(function(list){
+    list.setAttribute('class', 'listitem');
+    list.style.color = 'rebeccapurple'; })
+    
+const imageProfile = document.createElement('img');
+imageProfile.setAttribute('src', 'https://source.unsplash.com/600x400');
+const profileDiv = document.querySelector('.profilePicture');
+profileDiv.append(imageProfile);
+var books = [
+    {
+      title: "The Design of Everyday Things",
+      author: "Don Norman",
+      alreadyRead: false,
+      url: 'https://source.unsplash.com/600x400'
+    },
+    {
+      title: "The Most Human Human",
+      author: "Brian Christian",
+      alreadyRead: true,
+      url: 'https://source.unsplash.com/1600x900'
+    },
+    {
+      title: "In Search of Lost Time",
+      author: "Marcel Proust",
+      alreadyRead: true,
+      url: 'https://source.unsplash.com/1600x900'
+    },
+    {
+      title: "Ulysses",
+      author: "James Joyce",
+      alreadyRead: true,
+      url: 'https://source.unsplash.com/600x400'
+    },
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      alreadyRead: true,
+      url: 'https://source.unsplash.com/1600x900'
+    }
+  ];
+  
+    
+  const booksDiv = document.querySelector('div.favoriteBooks');
+  booksDiv.innerHTML = '<h1>My Book List</h1>'
+
+const unorederList = document.createElement('ul');
+
+books.forEach(function (book) {
+    const bookElm = document.createElement('p');
+    const bookImg = document.createElement('img');
+    bookImg.setAttribute('src', book.url);
+    bookImg.style.width = '150px';
+    bookElm.innerText = `${book.title}, by ${book.author}.`
+    if (book.alreadyRead){
+      bookElm.style.color = 'red';
+    }
+    const listItem = document.createElement('li');
+    listItem.append(bookElm);
+    listItem.append(bookImg);
+    unorederList.append(listItem);
+})
+
+  
+booksDiv.append(unorederList);
+    
+</script>
+</body>
+
+</html>

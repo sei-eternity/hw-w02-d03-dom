@@ -81,8 +81,8 @@ const content = `My Book List : `
    
     for(var i = 0 ; i<books.length; i++) {
        let paragraph = document.createElement("p");
-      paragraph.innerText = books[i];
-     document.body.appendChild(paragraph); 
+      paragraph.innerText = `${books[i].title } Written By ${books[i].author}`;
+     document.body.append(paragraph); 
    
     }
 

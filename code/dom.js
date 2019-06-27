@@ -16,7 +16,7 @@ for(let i=0; i<listItem.length; i++){
 
 
 const image = document.createElement('img');
-image.setAttribute('src','http://www.greenmoxie.com/wp/wp-content/uploads/Six.jpg');
+image.setAttribute('src','https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg');
 const imgDiv = document.querySelector('.profilePicture');
 imgDiv.appendChild(image);
 

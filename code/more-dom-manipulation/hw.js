@@ -11,7 +11,6 @@ for(var i=0 ;i< liItems.length; i++){
    liItems[i].style.color = 'rebeccapurple';}
  const newImage = document.createElement('img');
   newImage.setAttribute('src','IMG_2950.jpeg');
-  newImage.setAttribute('src','IMG_2950.jpeg');
   newImage.style.width = '150px';
 
   const targetDiv = document.querySelector('.profilePicture');
